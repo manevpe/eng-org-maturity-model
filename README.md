@@ -15,8 +15,8 @@ The template can be useful for creating process and tooling improvement roadmaps
 The template is available in the following formats:
  - Miro board .rtb export
  - csv
- - text
- 
- Feel free to create and use your own format.
+ - json
+ - markdown
    
- 
+Feel free to create and use your own format.
+
