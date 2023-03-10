@@ -7,8 +7,9 @@ The template can be useful for creating process and tooling improvement roadmaps
   
   
 ## Template Preview
-![Engineering Maturity](https://user-images.githubusercontent.com/3693244/224254973-28eb120f-2e8f-472b-9fdf-5f03d0e7438f.jpg)
-  
+![Engineering_Maturity](https://user-images.githubusercontent.com/3693244/224261075-050163b7-b0b8-4674-99de-c48365b455f9.jpg)
+
+
   
 ## Using the Template
 The template is available in the following formats:
