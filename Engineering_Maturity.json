@@ -1,0 +1,171 @@
+{
+  "org_name": "ACME",
+  "org_maturity_score": 5,
+  "area": {
+    "development": {
+      "score": 5,
+      "metrics": {
+        "documentation": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Dev Documentation:\n\nLevel 1 - Little to No docs.\n\nLevel 2 - Onboarding and dev env setup docs exists.\n\nLevel 3 - SD Process docs exists - a developer can create and submit work on their own. Guidelines for code styling, repo structure, branch structure, submitting PRs, etc. \n\nLevel 4 - Detailed architecture docs exist, including interservice communications (REST API, MB messages, etc.), DB schemas, etc.\n\nLevel 5 - a new person can successfully start, get familiar with, work, maintain and develop the project without any assistance. Docs are in an easy to use format and tools - ex. Postman or Swagger.\n"
+        },
+        "onboarding": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Onboarding:\n\nLevel 1 - No documentation, onboarding is done by a member of the team\n\nLevel 2 - Some onboarding docs exist. A member of the team walks a new starter through the process \n\nLevel 3 - Detailed onboarding docs and plan exist, that a new starter can follow on their own \n\nLevel 4 - Semi-automated onboarding\n\nLevel 5 - Fully automated onboarding process, including all accounts, info on systems, meet & greet, process info, etc. New starters receive all information & accounts they would need to successfully work on the project and the process is automated as much as possible"
+        },
+        "local_env_setup": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Local Env Setup How automated and easy the local environment setup is:\n\nLevel 1 - Fully manual setup\n\nLevel 2 - Uses a package manager. Setup documentation exists.\n\nLevel 3 - Uses a package manager. Setup is semi-automated via running different scripts / commands, which are well documented.\n\nLevel 4 - Setup is fully automated, but not including the required 3rd parties (ex. DB, ELK, etc.).\n\nLevel 5 - Setup is fully automated by running 1-2 commands, which are well documented. This includes download and install of all 3rd parties (ex. DB, ELK, etc.). It is ok to have 1-2 prerequisets - ex. Docker, k8s."
+        },
+        "ide_setup": {
+          "score": 5,
+          "max_score": 5,
+          "description": "IDE Setup:\n\nLevel 1 - Everything is done manually, no docs or unification\n\nLevel 2 - Docs exists how to manually setup the IDE\n\nLevel 3 - Code styling rules and config exists in the repo and can be imported in the IDE\n\nLevel 4 - Detailed docs exist on IDE setup\n\nLevel 5 - IDE setup is fully automated and unified across all devs"
+        },
+        "pre-commit_hooks": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Pre-commit hooks:\n\nLevel 1 - No pre-commit hooks\n\nLevel 2 - Pre-commit hook for linting, stopping commit on errors\n\nLevel 3 - Pre-commit hook for build, stopping commit on errors\n\nLevel 4 - Pre-commit hook for automated tests, stopping commit on errors\n\nLevel 5 - Fully automated pre-commit hook setup, including automatic linting errors fix"
+        },
+        "knowledge_and_skills_sharing": {
+          "score": 5,
+          "max_score": 5,
+          "description": "How much of the knowledge and skills are shared across the team - can they successfully cover for each other:\n\nLevel 1 - No knowledge sharing processes exist. Team members are highly specialized in a particular part of the project and cannot cover for each other\n\nLevel 2 - Knowledge sharing exists only in the form of documentation. Team members are highly specialized in one area, but have a little understanding of the technologies used in other areas as well\n\nLevel 3 - Regular knowledge sharing happens in the team. Team members are familiar with all areas and technologies in the product and can work on any area with supervision and guidance from another member. They can cover for each other on small tasks with noticeable productivity loss\n\nLevel 4 - All team members have the necessary knowledge and skills to work on all parts of the product at any time, with some noticeable productivity or quality loss\n\nLevel 5 - All team members have the necessary knowledge and skills to work on all parts of the product at any time, without noticeable productivity loss"
+        }
+      }
+    },
+    "testing": {
+      "score": 5,
+      "metrics": {
+        "unit_tests": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Unit tests coverage as a percentage of the total code base:\n\nLevel 1 - 0-20%\n\nLevel 2 - 20-40%\n\nLevel 3 - 40-60%\n\nLevel 4 - 60-80%\n\nLevel 5 - 80-100%"
+        },
+        "functional": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Percentage of automated functional testing, of all test scenarios - this includes E2E scenarios:\n\nLevel 1 - 0-20%\n\nLevel 2 - 20-40%\n\nLevel 3 - 40-60%\n\nLevel 4 - 60-80%\n\nLevel 5 - 80-100%"
+        },
+        "regression": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Regression Cycle:\n\nLevel 1 - Fully manual regression cycle taking several days\n\nLevel 2 - Mostly manual regression with some automated tests, covering mostly P1 critical paths / scenarios. Regression takes several days. Hotfixes can be done within 1-2 days with minimal focused manual testing\n\nLevel 3 - Automated tests covering all P1 critical and P2 major paths / scenarios. Fully automated sanity / smoke tests, executed at least daily. Hotfixes can be done in a few hours with no manual testing\n\nLevel 4 - Regression is fully automated. It might not cover all corner cases or all product configurations. Regression can take up to several hours, but no more than 24h. Releases can be done reliably with automated checks only\n\nLevel 5 - Regression is fully automated and happens in a matter of minutes (1h at most), allowing rapid, reliable and frequent releases. Close to no flaky tests. Flaky tests are rerun and if a flaky test is noticed, a ticket is automatically created to fix it"
+        },
+        "static_code_analysis": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Statis Code Analysis:\n\nLevel 1 - No static code analysis\n\nLevel 2 - Ad-hoc manualy executed static code analysis\n\nLevel 3 - Static code analysis is executed regularly on a dedicated server, covering at least 1 area of the code base\n\nLevel 4 - Static code analysis is executed regularly on a dedicated server, covering areas of the code base. It is checked by a human regularly and problem areas are addressed on time\n\nLevel 5 - Detailed static code analysis, including code complexity, code maintainability, estimated bug rate, potential security issues. Execution is automatic on every build, issues and code degradation prevent PR merging"
+        },
+        "performance": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Performance testing:\n\nLevel 1 - No performance testing\n\nLevel 2 - Limited manual performance testing is done on an ad-hoc basis\n\nLevel 3 - Thorough manual performance testing is done regularly, covering all needed areas\n\nLevel 4 - Semi-automated performance testing is done. It might not include things like automatic catching and reporting of performance degradation issues\n\nLevel 5 - Fully automated performance testing is done regularly. No manual involvement is needed. Issues are reported automatically"
+        },
+        "security": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Security testing:\n\nLevel 1 - No security testing\n\nLevel 2 - Limited manual security testing is done on an ad-hoc basis by internal or external experts. Members of the team have basic knowledge about security\n\nLevel 3 - Thorough manual security testing is done regularly, covering all needed areas. Members of the teamare familiar with the most common security issues and best practices\n\nLevel 4 - Semi-automated security testing is done, including static and dynamic code analysis. Members of the team are very familiar with security and pass regular security trainings.\n\nLevel 5 - Fully automated security testing is done regularly. No manual involvement is needed. Issues are reported automatically. Regular security audits are done"
+        },
+        "accessibility": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Accessibility testing:\n\nLevel 1 - No accessibility testing\n\nLevel 2 - Limited manual accessibility testing is done on an ad-hoc basis by internal or external experts. Members of the team have basic knowledge about accessiblity\n\nLevel 3 - Thorough manual accessibilitytesting is done regularly, covering all needed areas. Members of the team are familiar with the most common accessibility issues and best practices\n\nLevel 4 - Semi-automated accessibility testing is done. Members of the team are very familiar with accessibility and pass regular trainings.\n\nLevel 5 - Fully automated accessibility testing is done regularly. No manual involvement is needed. Issues are reported automatically."
+        }
+      }
+    },
+    "devops": {
+      "score": 5,
+      "metrics": {
+        "build": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Build:\n\nLevel 1 - Ad-hoc manual builds on a developer machine\n\nLevel 2 - Ad-hoc manual builds on a dedicated server\n\nLevel 3 - Automated build, including code linting, tests, etc. Artefacts are uploaded on a shared server / artifactory. Build result and links are automatically updated in the PR. Failed builds prevent PR merging\n\nLevel 4 - Build environment is available as code - ex. containers.\n\nLevel 5 - Modular build - build only modules / services that have changed. Build happens in <10 mins\n"
+        },
+        "environments": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Environments:\n\nLevel 1 - No shared dev / test environments\n\nLevel 2 - Manually managed dev / test environments exists, covering the needs - ex. dev, test, staging, etc.\n\nLevel 3 - Semi-automated environment management exists using various ad-hoc scripts. All environments have proper SSL certificates and domain names\n\nLevel 4 - Fully automated single environment setup, using a proper system to trigger it\n\nLevel 5 - All environments all available as Infrastructure as code, including all supporting systems - ex. build server, artifactory, etc. New environments can be spinned up automatically in a matter of seconds. The whole infrastructure can easily be spun up from code. Easy way to replicate prod environments, including anonimizing client data"
+        },
+        "deployment": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Deployment:\n\nLevel 1 - Ad-hoc manual deployment is done by copying files and executing shell commands\n\nLevel 2 - Automated new deployment on a clean server in the most common configuration\n\nLevel 3 - Automated new deployment on any server, including cleanup and pre-requisites install / setup on the most common configuration\n\nLevel 4 - Automated deployment on any environment in any supported configuration. Short downtime is accesptable\n\nLevel 5 - No downtime deployments. Automatic rollback on failures. Configurable deployment strategy - ex. blue / green; canary; A/B rollout; etc."
+        },
+        "monitoring": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Monitoring:\n\nLevel 1 - No measurements are done\n\nLevel 2 - Some metrics exist as read-only on a system\n\nLevel 3 - Detailed metrics are available for each production system, including uptime, response time, liveliness, dropped requests, errors, current load\n\nLevel 4 - Pro-active notifications from the metrics are sent appropriately\n\nLevel 5 - Alerts are handled by a system that uses correlation and noise reduction"
+        },
+        "runtime": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Runtime:\n\nLevel 1 - No runtime automation\n\nLevel 2 - Automated health-checks with notifications on issues\n\nLevel 3 - High-availability - deployment uses a load balancer or other tools to assure high-availability if a service goes down and automatically switch to the backup service\n\nLevel 4 - Automated horizontal scalling - automatically add or remove services as needed, based on load and service liveliness. Keep compute costs down automatically\n\nLevel 5 - A/B testing and rolling updates are available\n"
+        }
+      }
+    },
+    "product": {
+      "score": 5,
+      "metrics": {
+        "logging": {
+          "score": 3,
+          "max_score": 3,
+          "description": "Logging:\n\nLevel 1 - Logs are written on the disk per service\n\nLevel 2 - Log rotation and archiving is available\n\nLevel 3 - Centralized logging system is available with easy to search interface\n"
+        },
+        "multitenancy": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Multitenancy:\n\nLevel 1 - Multitenancy is not supported\n\nLevel 2 - Multitenancy is supported partially - some of the services can handle multiple tenants, while other cannot\n\nLevel 3 - Multitenancy is fully supported\n\nLevel 4 - New tenants can be onboarded fully automatically\n\nLevel 5 - Restrictions can be applied per tenant basis - ex. resource usage"
+        },
+        "request_traceability": {
+          "score": 2,
+          "max_score": 2,
+          "description": "Request Traceability:\n\nLevel 1 - No request traceability\n\nLevel 2 - Each request is assigned an UID, which is passed along and logged by each services that handles that particular request. The UID is passed to the client as well. Engineers can search a centralized logging system for a request UID and get all logs from all services, related to the request\n"
+        },
+        "service_discovery": {
+          "score": 2,
+          "max_score": 2,
+          "description": "Service Discovery:\n\nLevel 1 - Manual process done by hardcoded configuration what is the address of each service\n\nLevel 2 - Centralized service registration and discovery system is avilable\n"
+        },
+        "feature_flags": {
+          "score": 3,
+          "max_score": 3,
+          "description": "Feature Flags:\n\nLevel 1 - No such functionality available\n\nLevel 2 - Feature flags are available as a configuration in the product\n\nLevel 3 - Feature flags are available in a centralized service"
+        },
+        "usage_analytics": {
+          "score": 3,
+          "max_score": 3,
+          "description": "Usage Analytics:\n\nLevel 1 - No analytics available\n\nLevel 2 - Simply usage analytics available - ex. how many time a particular page was loaded\n\nLevel 3 - Detailed custom usage analytics available - ex. ability to see detailed interactions with the application and filter the data\n"
+        }
+      }
+    },
+    "technology": {
+      "score": 5,
+      "metrics": {
+        "tooling_versions": {
+          "score": 3,
+          "max_score": 3,
+          "description": "Do we use an up to date version of our tools? Tools are considered anything that we use to write or run the application:\n\nLevel 1 - Using at least 1 deprecated tool version\n\nLevel 2 - Using some latest and some older versions, but no deprecated ones\n\nLevel 3 - Using only latest stable versions of all tools. All security patches of our tools and dependencies are applied quickly\n"
+        },
+        "os_compatibility": {
+          "score": 3,
+          "max_score": 3,
+          "description": "Can we run our application on different OS:\n\nLevel 1 - Runs on only 1 OS\n\nLevel 2 - Can be run on multiple OSs, but has some limitations, or requires a lot of additional configuration and support\n\nLevel 3 - Can be run on any popular OS as is, or with minimal configuration"
+        },
+        "cloud_compatibility": {
+          "score": 3,
+          "max_score": 3,
+          "description": "Can we run our application on different Cloud providers:\n\nLevel 1 - Runs on only 1 Cloud provider\n\nLevel 2 - Can be run on different cloud providers, but has some limitations, or requires a lot of additional configuration and support\n\nLevel 3 - Can be run on any popular cloud as is, or with minimal configuration\n"
+        },
+        "horizontal_scalability": {
+          "score": 5,
+          "max_score": 5,
+          "description": "Can the application be scalled horizontally:\n\nLevel 1 - No horizontal scallability\n\nLevel 2 - Horizontal scallability is available, but requires manual setup and work is not load balanced\n\nLevel 3 - Horizontal scalability is done fully automatically with good load distribution\n\nLevel 4 - Automated scalling up and down, depending on the load\n"
+        }
+      }
+    }
+  }
+}
