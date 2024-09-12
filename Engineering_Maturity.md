@@ -1,7 +1,7 @@
 # Engineering Maturity Model Template
   
   
-## ORG NAME
+## ORG / TEAM NAME
 Total Score: 5
   
 ### Development
@@ -104,7 +104,7 @@ Level 1 - Fully manual regression cycle taking several days
 Level 2 - Mostly manual regression with some automated tests, covering mostly P1 critical paths / scenarios. Regression takes several days. Hotfixes can be done within 1-2 days with minimal focused manual testing  
 Level 3 - Automated tests covering all P1 critical and P2 major paths / scenarios. Fully automated sanity / smoke tests, executed at least daily. Hotfixes can be done in a few hours with no manual testing  
 Level 4 - Regression is fully automated. It might not cover all corner cases or all product configurations. Regression can take up to several hours, but no more than 24h. Releases can be done reliably with automated checks only  
-Level 5 - Regression is fully automated and happens in a matter of minutes (1h at most), allowing rapid, reliable and frequent releases. Close to no flaky tests. Flaky tests are rerun and if a flaky test is noticed, a ticket is automatically created to fix it  
+Level 5 - Regression is fully automated and happens in a matter of minutes (1h at most), allowing rapid, reliable and frequent releases. Close to no flaky tests. Flaky tests are rerun and if a flaky test is noticed, a ticket is automatically created to fix it. Little to no escaped defects  
 
 ##### Static Code Analysis
 Score: 5  
@@ -204,13 +204,15 @@ Level 5 - A/B testing and rolling updates are available
 ### Product
 Score: 5
 
-##### Logging
-Score: 3  
-Max Score: 3  
+##### Logging & Alerting
+Score: 5  
+Max Score: 5  
 Description:  
 Level 1 - Logs are written on the disk per service  
 Level 2 - Log rotation and archiving is available  
-Level 3 - Centralized logging system is available with easy to search interface  
+Level 3 - Centralized logging system is available with easy to search interface. Log levels can be changed dynamically, without the need to restart the service.  
+Level 4 - Automated Alerting system is in place. Alerts can be setup as code. Proper communication channels are established and monitored regularly.  
+Level 5 - All critical and high priority events have an alert configured. For business critical services, there is a proper on-call procedure in place.  
 
 
 ##### Multitenancy
@@ -223,19 +225,15 @@ Level 3 - Multitenancy is fully supported
 Level 4 - New tenants can be onboarded fully automatically  
 Level 5 - Restrictions can be applied per tenant basis - ex. resource usage  
 
-##### Request Traceability
-Score: 2  
-Max Score: 2  
+##### Microservice Tooling
+Score: 4  
+Max Score: 4  
 Description:  
-Level 1 - No request traceability  
-Level 2 - Each request is assigned an UID, which is passed along and logged by each services that handles that particular request. The UID is passed to the client as well. Engineers can search a centralized logging system for a request UID and get all logs from all services, related to the request  
+Level 1 - Not using microservices  
+Level 2 - Service Discovery - A centralized service registration and discovery system is available (k8s, Eureka, Consul, etc.)  
+Level 3 - Request Traceability - each request can be traced between microservices, it is assigned an UID, which is passed along and logged by each services that handles that particular request. The UID is passed to the FE client as well. Engineers can search a centralized logging system for a request UID and get all logs from all services, related to the request  
+Level 4 - Microservice Templating - generic microservice templates exists, that can easily be copied to create new microservices, with the required dependencies and setup. New microservices can be created with a few clicks using a system like Backstage or Port.  
 
-##### Service Discovery
-Score: 2  
-Max Score: 2  
-Description:  
-Level 1 - Manual process done by hardcoded configuration what is the address of each service  
-Level 2 - Centralized service registration and discovery system is avilable  
 
 ##### Feature Flags
 Score: 3  
@@ -244,6 +242,7 @@ Description:
 Level 1 - No such functionality available  
 Level 2 - Feature flags are available as a configuration in the product  
 Level 3 - Feature flags are available in a centralized service  
+
 
 ##### Usage Analytics
 Score: 3  
@@ -295,4 +294,5 @@ Level 1 - No horizontal scallability
 Level 2 - Horizontal scallability is available, but requires manual setup and work is not load balanced  
 Level 3 - Horizontal scalability is done fully automatically with good load distribution  
 Level 4 - Automated scalling up and down, depending on the load  
+Level 5 - Scale to zero is implemented in order to reduce cost on services that are used irregularly  
 
